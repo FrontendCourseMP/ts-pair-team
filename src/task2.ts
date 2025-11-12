@@ -23,3 +23,6 @@ public isValid(s: string): boolean {
     }
     return stack.length === 0;
 }
+private isOpenBracket(char: string): boolean {
+    return this.bracketPairs.has(char)
+}
