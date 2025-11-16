@@ -31,3 +31,5 @@ function checkValid(str: string) {
   }
   return stack.size() === 0
 }
+
+export default checkValid

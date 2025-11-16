@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-  <h1>Задача 1</h1>
-    <form>
+  <h2>Задача 1</h2>
+    <form id="form1">
       <label>
         Час прибытия:
         <input type="number" id="arrival" min="0" max="23" required />
@@ -15,16 +15,15 @@
         Опоздание:
         <input type="number" id="delay" min="0" required />
       </label>
-      <br /><br />
       <button type="submit">Рассчитать</button>
-      <br /><br />
-      <output></output>
+      <output id="output"></output>
     </form>
-    <h1>Задача 2</h1>
-    <div>
-      <label>Введите строку из скобок<input placeholder="Например: (({[]}))" type="text"></label>
-      <button id="isValid">Проверить валидность</button>
-    </div>
+    <h2>Задача 2</h2>
+      <form id="form2">
+        <label>Введите строку из скобок<input id="sequence" placeholder="Например: (({[]}))" type="text"></label>
+        <button>Проверить валидность</button>
+        <output id="result"></output>
+      </form>
 
     <script type="module" src="./dist/main.js"></script>
   </body>
