@@ -1,6 +1,6 @@
 class Stack {
   private elements: string[]
-    constructor(lala: string) {
+    constructor() {
         this.elements = []
     }
   add(elem: string) {
@@ -15,3 +15,19 @@ class Stack {
   }
 }
 
+function checkValid(str: string) {
+  const values = {')': '(', '}': '{', ']': '['}
+  const stack = new Stack()
+  for (const s of str) {
+    if (s === values[")"] || s === values["]"] || s === values["}"]) {
+      stack.add(s)
+    } else if (stack.size() === 0) {
+        return false
+    } else {
+      if (stack.remove() !== values[s]) {
+        return false
+      }
+    }
+  }
+  return stack.size() === 0
+}
