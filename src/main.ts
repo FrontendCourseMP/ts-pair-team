@@ -1,13 +1,9 @@
 
+import calcNewArrival from "./utils/calcNewArrival.js";
 const form = document.querySelector("form") as HTMLFormElement;
 const arrivalInput = document.getElementById("arrival") as HTMLInputElement;
 const delayInput = document.getElementById("delay") as HTMLInputElement;
 const output = document.querySelector("output") as HTMLOutputElement;
-
-function calcNewArrival(arrival: number, delay: number): number {
-  let newTime = (arrival + delay) % 24;
-  return newTime;
-}
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -23,3 +19,4 @@ form.addEventListener("submit", (event) => {
   const newArrival = calcNewArrival(arrival, delay);
   output.value = `Новое время прибытия: ${newArrival}:00`;
 });
+
